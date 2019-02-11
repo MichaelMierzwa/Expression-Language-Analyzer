@@ -1,0 +1,5 @@
+Type Error: specification of command executions is not type-correct
+Error: unknown event name implies
+Error: unknown event name implies
+Error: unknown event name implies
+Error: unknown event name implies

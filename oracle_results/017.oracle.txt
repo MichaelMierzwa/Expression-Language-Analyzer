@@ -1,0 +1,3 @@
+Type Error: specification of command executions is not type-correct
+Error: unknown event name divides
+Error: unknown event name divides

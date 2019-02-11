@@ -1,0 +1,92 @@
+  Expression currently specified: ?
+  Report: Expression is initialized.
+->for_all
+  Expression currently specified: (&& ?)
+  Report: OK.
+->open_set_enumeration
+  Expression currently specified: (&& {?})
+  Report: OK.
+->equals
+  Expression currently specified: (&& {(? = nil)})
+  Report: OK.
+->open_set_enumeration
+  Expression currently specified: (&& {({?} = nil)})
+  Report: OK.
+->integer_constant(13)
+  Expression currently specified: (&& {({13, ?} = nil)})
+  Report: OK.
+->integer_constant(16)
+  Expression currently specified: (&& {({13, 16, ?} = nil)})
+  Report: OK.
+->integer_constant(22)
+  Expression currently specified: (&& {({13, 16, 22, ?} = nil)})
+  Report: OK.
+->close_set_enumeration
+  Expression currently specified: (&& {({13, 16, 22} = ?)})
+  Report: OK.
+->difference
+  Expression currently specified: (&& {({13, 16, 22} = (? \ nil))})
+  Report: OK.
+->open_set_enumeration
+  Expression currently specified: (&& {({13, 16, 22} = ({?} \ nil))})
+  Report: OK.
+->integer_constant(13)
+  Expression currently specified: (&& {({13, 16, 22} = ({13, ?} \ nil))})
+  Report: OK.
+->integer_constant(16)
+  Expression currently specified: (&& {({13, 16, 22} = ({13, 16, ?} \ nil))})
+  Report: OK.
+->integer_constant(22)
+  Expression currently specified: (&& {({13, 16, 22} = ({13, 16, 22, ?} \ nil))})
+  Report: OK.
+->integer_constant(44)
+  Expression currently specified: (&& {({13, 16, 22} = ({13, 16, 22, 44, ?} \ nil))})
+  Report: OK.
+->integer_constant(88)
+  Expression currently specified: (&& {({13, 16, 22} = ({13, 16, 22, 44, 88, ?} \ nil))})
+  Report: OK.
+->close_set_enumeration
+  Expression currently specified: (&& {({13, 16, 22} = ({13, 16, 22, 44, 88} \ ?))})
+  Report: OK.
+->open_set_enumeration
+  Expression currently specified: (&& {({13, 16, 22} = ({13, 16, 22, 44, 88} \ {?}))})
+  Report: OK.
+->integer_constant(44)
+  Expression currently specified: (&& {({13, 16, 22} = ({13, 16, 22, 44, 88} \ {44, ?}))})
+  Report: OK.
+->integer_constant(88)
+  Expression currently specified: (&& {({13, 16, 22} = ({13, 16, 22, 44, 88} \ {44, 88, ?}))})
+  Report: OK.
+->integer_constant(90)
+  Expression currently specified: (&& {({13, 16, 22} = ({13, 16, 22, 44, 88} \ {44, 88, 90, ?}))})
+  Report: OK.
+->integer_constant(100)
+  Expression currently specified: (&& {({13, 16, 22} = ({13, 16, 22, 44, 88} \ {44, 88, 90, 100, ?}))})
+  Report: OK.
+->type_check
+  Expression currently specified: (&& {({13, 16, 22} = ({13, 16, 22, 44, 88} \ {44, 88, 90, 100, ?}))})
+  Report: Error (Expression is not yet fully specified).
+->close_set_enumeration
+  Expression currently specified: (&& {({13, 16, 22} = ({13, 16, 22, 44, 88} \ {44, 88, 90, 100})), ?})
+  Report: OK.
+->type_check
+  Expression currently specified: (&& {({13, 16, 22} = ({13, 16, 22, 44, 88} \ {44, 88, 90, 100})), ?})
+  Report: Error (Expression is not yet fully specified).
+->equals
+  Expression currently specified: (&& {({13, 16, 22} = ({13, 16, 22, 44, 88} \ {44, 88, 90, 100})), (? = nil)})
+  Report: OK.
+->boolean_constant(True)
+  Expression currently specified: (&& {({13, 16, 22} = ({13, 16, 22, 44, 88} \ {44, 88, 90, 100})), (True = ?)})
+  Report: OK.
+->boolean_constant(True)
+  Expression currently specified: (&& {({13, 16, 22} = ({13, 16, 22, 44, 88} \ {44, 88, 90, 100})), (True = True), ?})
+  Report: OK.
+->close_set_enumeration
+  Expression currently specified: (&& {({13, 16, 22} = ({13, 16, 22, 44, 88} \ {44, 88, 90, 100})), (True = True)})
+  Report: OK.
+->type_check
+  Expression currently specified: (&& {({13, 16, 22} = ({13, 16, 22, 44, 88} \ {44, 88, 90, 100})), (True = True)})
+  Report: (&& {({13, 16, 22} = ({13, 16, 22, 44, 88} \ {44, 88, 90, 100})), (True = True)}) is type-correct.
+->evaluate
+  Expression currently specified: (&& {({13, 16, 22} = ({13, 16, 22, 44, 88} \ {44, 88, 90, 100})), (True = True)})
+  Report: True

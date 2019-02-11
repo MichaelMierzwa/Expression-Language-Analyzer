@@ -1,0 +1,7 @@
+open_set_enumeration
+integer_constant(1)
+integer_constant(1)
+integer_constant(5)
+close_set_enumeration
+type_check
+
